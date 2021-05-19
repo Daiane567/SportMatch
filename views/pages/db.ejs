@@ -2,9 +2,6 @@
 <html>
 <head>
   <%- include ("../partials/header.ejs") %>
-  <%
-  var results = JSON.parse('[{"nome":"Silvio ","idade":32,"sexo":"masculino","esporte":["caminhada"],"endereco":"44 rue Demy Shilester","nivelEsportivo":"amador"},{"nome":"Liliane","idade":25,"sexo":"feminino","esporte":["bicicleta","caminhada","vôlei"],"endereco":"rua bernado","nivelEsportivo":"amador"}]') %>
-
 </head>
 
 <body>
@@ -16,7 +13,7 @@
 
 <ul>
     <% results.forEach(function(r) { %>
-        <li><%= r.nome %> - <%= r.sexo %></li>
+        <li><%= r.id %> - <%= r.name %></li>
     <% }); %>
 </ul>
 
