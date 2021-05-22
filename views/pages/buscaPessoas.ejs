@@ -11,6 +11,25 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 <!-- Background image -->
     <style>
+   
+      section{
+        display: flex;
+        flex-direction: row;
+      }
+     #main{
+       width: 960px;
+     }
+
+      aside{
+        display: inline-block;
+        min-height: 400px;
+        height: 300;
+        width: 300px;
+        background: coral;
+        margin: 20px;
+
+      }
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -113,13 +132,11 @@
             </div>
           </div>
         </div><!--dropdwns-->
+        <section class="main">
         <main><!--divisão da tela com grid-->
           <div class="container-fluid">
             <% for(var i=0; i<4; i++){ %>
             <div class="row"><!--principal1-->
-              <div class="col-3">
-                Column1
-              </div><!--principalfinal1-->
               <div class="col"><!--principal2-->
                 Column2
                 <%- include ("../partials/componentePessoa.ejs") %>
@@ -131,6 +148,29 @@
         
 
       </main>
+      <aside>
+        <ul>
+          <section>
+        <div class="row">
+          <div class="col">
+          <img src="/stylesheets/img/elaine.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="col">
+          <div class="card-body-center text-a">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section></section>
+    <section></section>
+    <section></section>
+      </ul>
+      </aside>
+    </section>
       <footer class="pt-4 my-md-5 pt-md-5 border-top"><!--Rodape-->
         <div class="row">
           <div class="col-12 col-md">
