@@ -16,19 +16,24 @@
         display: flex;
         flex-direction: row;
       }
-     #main{
-       width: 960px;
-     }
+    
 
       aside{
         display: inline-block;
-        min-height: 400px;
-        height: 300;
-        width: 300px;
-        background: coral;
+        min-height: 250%;
+        width: 250%;
+        background: rgb(166, 230, 187);
         margin: 20px;
 
       }
+
+      @media (max-width: 600px)
+{
+  aside
+   {
+    display: none;
+   }
+}
 
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -133,6 +138,17 @@
           </div>
         </div><!--dropdwns-->
         <section class="main">
+          <aside>
+            <%var escolhas = ['Mulher', 'Homem', 'Esporte amador', 'Pago', 'Gratuito', 'Esporadico']%>
+            <% for(var i=0; i<escolhas.length; i++){ %>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                <%= escolhas[i] %>
+              </label>
+            </div>
+            <% } %>
+          </aside>
         <main><!--divisão da tela com grid-->
           <div class="container-fluid">
             <% for(var i=0; i<4; i++){ %>
@@ -148,28 +164,7 @@
         
 
       </main>
-      <aside>
-        <ul>
-          <section>
-        <div class="row">
-          <div class="col">
-          <img src="/stylesheets/img/elaine.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="col">
-          <div class="card-body-center text-a">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-    <section></section>
-    <section></section>
-    <section></section>
-      </ul>
-      </aside>
+      
     </section>
       <footer class="pt-4 my-md-5 pt-md-5 border-top"><!--Rodape-->
         <div class="row">
