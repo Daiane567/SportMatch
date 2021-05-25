@@ -17,23 +17,17 @@
         flex-direction: row;
       }
     
-
+  
       aside{
         display: inline-block;
         min-height: 250%;
         width: 250%;
-        background: rgb(166, 230, 187);
+        background: rgb(194, 199, 197);
         margin: 20px;
 
-      }
+      }  
 
-      @media (max-width: 600px)
-{
-  aside
-   {
-    display: none;
-   }
-}
+  
 
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -138,7 +132,7 @@
           </div>
         </div><!--dropdwns-->
         <section class="main">
-          <aside>
+         <aside>
             <%var escolhas = ['Mulher', 'Homem', 'Esporte amador', 'Pago', 'Gratuito', 'Esporadico']%>
             <% for(var i=0; i<escolhas.length; i++){ %>
             <div class="form-check">
@@ -148,6 +142,10 @@
               </label>
             </div>
             <% } %>
+            <figure class="figure">
+              <img src="/stylesheets/img/propaganda2.jpg" class="figure-img img-fluid rounded" alt="...">
+              <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+            </figure>
           </aside>
         <main><!--divisão da tela com grid-->
           <div class="container-fluid">
@@ -159,17 +157,75 @@
               </div><!--principalfinal2-->
             </div>
             <% } %>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+              <div class="btn-group me-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary">1</button>
+                <button type="button" class="btn btn-primary">2</button>
+                <button type="button" class="btn btn-primary">3</button>
+                <button type="button" class="btn btn-primary">...</button>
+                <button type="button" class="btn btn-primary">20</button>
+                <button type="button" class="btn btn-primary">21</button>
+                <button type="button" class="btn btn-primary">22</button>
+              </div>
+            </div>
           </div>
-
-        
-
+          <div class="container-fluid">
+            <div class="row gx-5">
+              <div class="col">
+               <p>veja também</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="card">
+                <img src="/stylesheets/img/quadra de tenis.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card">
+                <img src="/stylesheets/img/quadra de tenis.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card">
+                <img src="/stylesheets/img/quadra de tenis.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card">
+                <img src="/stylesheets/img/quadra de tenis.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
       </main>
       
     </section>
       <footer class="pt-4 my-md-5 pt-md-5 border-top bg-dark"><!--Rodape-->
         <div class="row">
           <div class="col-12 col-md">
-            <img class="mb-2" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
+            <img class="mb-2" src="/brand/bootstrap-logo.svg" alt="" width="24" height="19">
             <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
           </div>
           <div class="col-6 col-md">
