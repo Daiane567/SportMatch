@@ -152,3 +152,11 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.btn-toolbar{
+  margin-top: 1%;
+  position: relative;
+  
+ 
+}
+
