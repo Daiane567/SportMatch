@@ -1,0 +1,13 @@
+<%var escolhas = ['Mulher', 'Homem', 'Esporte amador', 'Pago', 'Gratuito', 'Esporadico']%>
+<% for(var i=0; i<escolhas.length; i++){ %>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            <%= escolhas[i] %>
+        </label>
+    </div>
+<% } %>
+<figure class="figure">
+    <img src="/stylesheets/img/propaganda2.jpg" class="figure-img img-fluid rounded" alt="...">
+    <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+</figure>

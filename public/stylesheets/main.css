@@ -3,8 +3,6 @@
 /* Padding below the footer and lighter body text */
 
 body {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
     color: #5a5a5a;
   }
   
@@ -158,5 +156,9 @@ body {
   position: relative;
   
  
+}
+
+.form-signin{
+  margin-top: 15%;
 }
 
