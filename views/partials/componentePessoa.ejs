@@ -1,13 +1,22 @@
+<% for(var i=0; i<Storage.getItem("pessoas").length; i++){ %>
+  <div class="row"><!--principal1-->
+    <div class="col"><!--principal2-->
+<%
+    let pessoa = Storage.getItem("pessoas")[i];
+    %>
 <div class="row">
-    <div class="col">
-    <img src="/stylesheets/img/elaine.jpg" class="card-img-top" alt="..">
+  <div class="col">
+    <div class="card">
+      <img src="<%= pessoa.imagem %>" class="card-img-top" alt="...">
+     
     </div>
-    <div class="col">
-    <div class="card-body-center text-a">
-      <h5 class="card-title">Elaine</h5>
-      <p class="card-text">Descrição da pessoa: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa esse reprehenderit quos officia qui voluptatum consequatur quasi, a, autem explicabo aliquam expedita quia ab amet doloribus aut nam quam eum.</p>
+  </div>
+  <div class="col">
+    <div class="card-body">
+      <h5 class="card-title"><%= pessoa.nome %></h5>
+      <p class="card-text"><%= pessoa.descricao %></p>
       <a href="#" class="btn btn-primary">Entrar em contato</a>
     </div>
   </div>
-</div>
-</div>
+</div><!--principalfinal2-->
+<% } %>
