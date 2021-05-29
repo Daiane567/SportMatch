@@ -1,6 +1,35 @@
-const express = require('express')
+const express = require('express');
 const path = require('path')
 const PORT = process.env.PORT || 5000
+if(typeof Storage === "undefined" || Storage === null) {
+  var JSONStorage = require('node-localStorage').JSONStorage;
+  Storage = new JSONStorage('./dados');
+}
+Storage.setItem('pessoas', [
+  {
+  "nome":'Elaine',
+  "descricao":"qualquer coisa",
+  "imagem":"/stylesheets/img/elaine.jpg"
+ },
+ {
+  "nome":'Elaine',
+  "descricao":"qualquer coisa",
+  "imagem":"/stylesheets/img/elaine.jpg"
+
+ },
+ {
+  "nome":'Elaine',
+  "descricao":"qualquer coisa",
+  "imagem":"/stylesheets/img/elaine.jpg"
+
+ },
+ {
+  "nome":'Elaiane',
+  "descricao":"qualquer coisa",
+  "imagem":"/stylesheets/img/elaine.jpg"
+
+ }
+ ]);
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
