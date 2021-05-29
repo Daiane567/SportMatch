@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path')
 const PORT = process.env.PORT || 5000
 if(typeof Storage === "undefined" || Storage === null) {
-  var JSONStorage = require('node-localStorage').JSONStorage;
+  var JSONStorage = require('node-localstorage').JSONStorage;
   Storage = new JSONStorage('./dados');
 }
 Storage.setItem('pessoas', [
