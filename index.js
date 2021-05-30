@@ -6,30 +6,31 @@ if (typeof Storage === "undefined" || Storage === null) {
     Storage = new JSONStorage('./dados');
 }
 Storage.setItem('pessoas', [{
-    "nome": 'Carlos',
-    "descricao": "qualquer coisa",
-    "imagem": "/stylesheets/img/carlos.jpg"
-},
-{
-    "nome": 'Elaine',
-    "descricao": "qualquer coisa",
-    "imagem": "/stylesheets/img/elaine.jpg"
-},
-{
-    "nome": 'Fernanda',
-    "descricao": "qualquer coisa",
-    "imagem": "/stylesheets/img/fernanda.png"
-},
-{
-    "nome": 'Flavia',
-    "descricao": "qualquer coisa",
-    "imagem": "/stylesheets/img/flavia.jpg"
-},
-{
-    "nome": 'Rogério',
-    "descricao": "qualquer coisa",
-    "imagem": "/stylesheets/img/rogerio.jpg"
-}]);
+        "nome": 'Carlos',
+        "descricao": "qualquer coisa",
+        "imagem": "/stylesheets/img/carlos.jpg"
+    },
+    {
+        "nome": 'Elaine',
+        "descricao": "qualquer coisa",
+        "imagem": "/stylesheets/img/elaine.jpg"
+    },
+    {
+        "nome": 'Fernanda',
+        "descricao": "qualquer coisa",
+        "imagem": "/stylesheets/img/fernanda.png"
+    },
+    {
+        "nome": 'Flavia',
+        "descricao": "qualquer coisa",
+        "imagem": "/stylesheets/img/flavia.jpg"
+    },
+    {
+        "nome": 'Rogério',
+        "descricao": "qualquer coisa",
+        "imagem": "/stylesheets/img/rogerio.jpg"
+    }
+]);
 
 /*if (typeof Storage === "undefined" || Storage === null) { <!-- NÃO ESTA FUNCIONANDO, TEMOS QUE DESCOBRIR O MOTIVO -- ANA -->
     var JSONStorage = require('node-localstorage').JSONStorage;
@@ -66,4 +67,5 @@ express()
     .get('/buscaEsportes', (req, res) => res.render('pages/buscaEsportes'))
     .get('/buscaCampeonato', (req, res) => res.render('pages/buscaCampeonato'))
     .get('/paginadelogin', (req, res) => res.render('pages/paginadelogin'))
-    .listen(PORT, () => console.log(`Listening on ${PORT}`))
+    .get('/perfilUsuario', (req, res) => res.render('pages/perfilUsuario'))
+    .listen(PORT, () => console.log(`Listening on ${ PORT }`))
