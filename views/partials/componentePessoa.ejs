@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 x
 <div class="row">
     <div class="col">
@@ -13,3 +14,27 @@ x
     </div>
 </div>
 </div>
+=======
+<% for(var i=0; i<Storage.getItem("pessoas").length; i++){ %>
+  <div class="row"><!--principal1-->
+    <div class="col"><!--principal2-->
+<%
+    let pessoa = Storage.getItem("pessoas")[i];
+    %>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <img src="<%= pessoa.imagem %>" class="card-img-top" alt="...">
+     
+    </div>
+  </div>
+  <div class="col">
+    <div class="card-body">
+      <h5 class="card-title"><%= pessoa.nome %></h5>
+      <p class="card-text"><%= pessoa.descricao %></p>
+      <a href="#" class="btn btn-primary">Entrar em contato</a>
+    </div>
+  </div>
+</div><!--principalfinal2-->
+<% } %>
+>>>>>>> 191e21ba5f61439686377ab37e26b4394d701097
