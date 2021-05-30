@@ -29,8 +29,7 @@ Storage.setItem('pessoas', [{
     "nome": 'Rogério',
     "descricao": "qualquer coisa",
     "imagem": "/stylesheets/img/rogerio.jpg"
-}
-]);
+}]);
 
 /*if (typeof Storage === "undefined" || Storage === null) { <!-- NÃO ESTA FUNCIONANDO, TEMOS QUE DESCOBRIR O MOTIVO -- ANA -->
     var JSONStorage = require('node-localstorage').JSONStorage;
