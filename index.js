@@ -13,7 +13,7 @@ Storage.setItem('pessoas', [{
     {
         "nome": 'Marcos',
         "descricao": "Sou Marcos tenho 42 anos, moro na cidade de Belo Horizonte, Pratico tênis e polo aquático. Minha disponibilidade para pratica de esportes é aos finais de semana na parte da manhã e tarde. Busco algum parceiro para partidas de tênis ou ingressar em uma equipe de polo aquático.",
-        "imagem": "/stylesheets/img/elaine.jpg"
+        "imagem": "/stylesheets/img/marcos.jpg"
 
     },
     {
