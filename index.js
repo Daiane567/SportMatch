@@ -13,7 +13,7 @@ Storage.setItem('pessoas', [{
     {
         "nome": 'Marcos',
         "descricao": "Sou Marcos tenho 42 anos, moro na cidade de Belo Horizonte, Pratico tênis e polo aquático. Minha disponibilidade para pratica de esportes é aos finais de semana na parte da manhã e tarde. Busco algum parceiro para partidas de tênis ou ingressar em uma equipe de polo aquático.",
-        "imagem": "/stylesheets/img/elaine.jpg"
+        "imagem": "/stylesheets/img/marcos.jpg"
 
     },
     {
@@ -36,7 +36,8 @@ express()
     .set('view engine', 'ejs')
     .get('/', (req, res) => res.render('pages/index'))
     .get('/buscaPessoas', (req, res) => res.render('pages/buscaPessoas'))
-    .get('/buscaEquipes', (req, res) => res.render('pages/buscaEquipes'))
+    .get('/buscaEsportes', (req, res) => res.render('pages/buscaEsportes'))
     .get('/buscaCampeonato', (req, res) => res.render('pages/buscaCampeonato'))
     .get('/paginadelogin', (req, res) => res.render('pages/paginadelogin'))
+    .get('/perfilUsuario', (req, res) => res.render('pages/perfilUsuario'))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
