@@ -2,10 +2,18 @@ const { Console } = require("console");
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
+//const { SHA3 } = require('sha3');//
+//const hash = new SHA3(224);//
 if (typeof Storage === "undefined" || Storage === null) {
   var JSONStorage = require("node-localstorage").JSONStorage;
   Storage = new JSONStorage("./dados");
 }
+
+if (typeof StorageSenhas === "undefined" || StorageSenhas === null) {
+    var JSONStorage = require("node-localstorage").JSONStorage;
+    StorageSenhas = new JSONStorage("./dados/senhas");
+  }
+
 Storage.setItem('pessoas', [{
         "nome": 'Elaine',
         "descricao": "Me chamo Elaine tenho 32 anos, sou da cidade do Rio de Janeiro. Prático Futevôlei e Caminhada e busco parceiros para pratica de minhas modalidades. Tenho disponibilidade para pratica de esportes diariamente após as 18h00.",
@@ -30,6 +38,20 @@ Storage.setItem('pessoas', [{
 
     }
 ]);
+//console.log (Storage.getItem('pessoas'))//
+    StorageSenhas.setItem("aaaaaaa@gmail.com",{
+        "email":" aaaaaaa@gmail.com",
+        "senha":"23344",
+    })
+    console.log(StorageSenhas.getItem("aaaaaaa@gmail.com").senha)
+    console.log(StorageSenhas.getItem("aaaaaaa@gmail.com"))
+    StorageSenhas.setItem("mmmmmm@gmail.com",{
+        "email":" mmmmmm@gmail.com",
+        "senha":"277774",
+    })
+    console.log(StorageSenhas.getItem("mmmmmm@gmail.com").senha)
+    console.log(StorageSenhas.getItem("mmmmmm@gmail.com"))
+
 
 express()
   .use(express.static(path.join(__dirname, "public")))
