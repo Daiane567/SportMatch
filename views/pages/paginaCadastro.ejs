@@ -24,19 +24,21 @@
                 </div>
                 <!-- /.col-lg-4 -->
             </div>
-
+            <div class="row g-5">
+            <form class="form-inline">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">V</button>
+                <input class="form-check-label mr-sm-2" type="search" placeholder="Whatsapp" aria-label="Pesquisar">
+            </form>
+            <form class="form-inline">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">V</button>
+                <input class="form-check-label mr-sm-2" type="search" placeholder="Instagram" aria-label="Pesquisar">
+            </form>
+        </div>
             <!-- Quadro de Escolhas de Equipes -->
 
             <div class="row g-5">
-                <div class="col-md-5 col-lg-4 order-md-last">
-                    <form class="form-inline">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">V</button>
-                        <input class="form-check-label mr-sm-2" type="search" placeholder="Whatsapp" aria-label="Pesquisar">
-                    </form>
-                    <form class="form-inline">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">V</button>
-                        <input class="form-check-label mr-sm-2" type="search" placeholder="Instagram" aria-label="Pesquisar">
-                    </form>
+                <div class="col-md-6 col-lg-4 order-md-last">
+    
                     <div class="mb-3">
                         <form class="form-inline">
                             <input class="form-control mr-sm-2" type="search" placeholder="Nova Equipe" aria-label="Pesquisar">
@@ -46,28 +48,14 @@
                         <span class="text-primary">Escolha no Máximo 10 Equipes</span>
                         <span class="badge bg-primary rounded-pill"></span>
                     </h4>
-                    <div class="btn-group">
-                        <ul class="dropdown-menu">
-                            ...
-                        </ul>
-                    </div>
-                    <div class="btn-group">
-                        <button class="btn btn-secondary btn-sm" type="button">
-                        Small split button
-                      </button>
-                        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="visually-hidden">Toggle Dropdown</span>
-                      </button>
-                        <ul class="dropdown-menu">
-                            ...
-                        </ul>
-                    </div>
+                    
+                   
 
                     <div class="container-fluid">
                         <div class="row ">
                             <div class="container">
                             </div>
-                            <div class="col-3 col-sm-6">
+                            <div class="col-1 col-sm-6">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                     <label class="form-check-label" for="flexRadioDefault2">
@@ -102,10 +90,9 @@
                                     </label>
                                   </div>
                             </div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="container-fluid">
-                                    </div>
+                            
+                                   
+        
                                     <div class="col-6 col-sm-6">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
@@ -161,26 +148,7 @@
                                             </label>
                                           </div>
                                     </div>
-                                    <div class="w-100"></div>
-
-                                    <div class="col-6 col-sm-6">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                              Equipe 7
-                                            </label>
-                                          </div>
-                                    </div>
-                                    <div class="col-6 col-sm-6">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                              Equipe 8
-                                            </label>
-                                          </div>
-                                    </div>
-                                </div>
-                            </div>
+                             
                         </div>
                     </div>
                 </div>
@@ -291,15 +259,19 @@
                     </tr>
                 </tbody>
             </table>
+           <!-- <footer>
+                
+                <%- include ("../partials/footer.ejs") %>
+            </footer>-->
+    
+    
         </div>
-        <footer>
-            <!--Rodape-->
-            <%- include ("../partials/footer.ejs") %>
-        </footer>
+        
 
         <script src="/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
         <script src="form-validation.js"></script>
+
 </body>
 
 </html>

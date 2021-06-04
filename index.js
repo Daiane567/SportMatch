@@ -39,18 +39,18 @@ Storage.setItem('pessoas', [{
     }
 ]);
 //console.log (Storage.getItem('pessoas'))//
-    StorageSenhas.setItem("aaaaaaa@gmail.com",{
-        "email":" aaaaaaa@gmail.com",
+    StorageSenhas.setItem("maria@gmail.com",{
+        "email":" maria@gmail.com",
         "senha":"23344",
     })
-    console.log(StorageSenhas.getItem("aaaaaaa@gmail.com").senha)
-    console.log(StorageSenhas.getItem("aaaaaaa@gmail.com"))
-    StorageSenhas.setItem("mmmmmm@gmail.com",{
-        "email":" mmmmmm@gmail.com",
+    console.log(StorageSenhas.getItem("maria@gmail.com").senha)
+    console.log(StorageSenhas.getItem("maria@gmail.com"))
+    StorageSenhas.setItem("pedro@gmail.com",{
+        "email":" pedro@gmail.com",
         "senha":"277774",
     })
-    console.log(StorageSenhas.getItem("mmmmmm@gmail.com").senha)
-    console.log(StorageSenhas.getItem("mmmmmm@gmail.com"))
+    console.log(StorageSenhas.getItem("pedro@gmail.com").senha)
+    console.log(StorageSenhas.getItem("pedro@gmail.com"))
 
 
 express()
