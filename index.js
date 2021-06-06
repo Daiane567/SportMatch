@@ -1,18 +1,21 @@
-const { Console } = require("console");
+const bodyParser = require("body-parser")
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
-//const { SHA3 } = require('sha3');//
-//const hash = new SHA3(224);//
+const { SHA3 } = require('sha3');
+const hash = new SHA3(224);
+
+
+const lib = require("./scripts/login");
 if (typeof Storage === "undefined" || Storage === null) {
-  var JSONStorage = require("node-localstorage").JSONStorage;
-  Storage = new JSONStorage("./dados");
+    var JSONStorage = require("node-localstorage").JSONStorage;
+    Storage = new JSONStorage("./dados");
 }
 
 if (typeof StorageSenhas === "undefined" || StorageSenhas === null) {
     var JSONStorage = require("node-localstorage").JSONStorage;
     StorageSenhas = new JSONStorage("./dados/senhas");
-  }
+}
 
 Storage.setItem('pessoas', [{
         "nome": 'Elaine',
@@ -39,31 +42,37 @@ Storage.setItem('pessoas', [{
     }
 ]);
 //console.log (Storage.getItem('pessoas'))//
-    StorageSenhas.setItem("maria@gmail.com",{
-        "email":" maria@gmail.com",
-        "senha":"23344",
-    })
-    console.log(StorageSenhas.getItem("maria@gmail.com").senha)
-    console.log(StorageSenhas.getItem("maria@gmail.com"))
-    StorageSenhas.setItem("pedro@gmail.com",{
-        "email":" pedro@gmail.com",
-        "senha":"277774",
-    })
-    console.log(StorageSenhas.getItem("pedro@gmail.com").senha)
-    console.log(StorageSenhas.getItem("pedro@gmail.com"))
+StorageSenhas.setItem("maria@gmail.com", {
+    "email": "maria@gmail.com",
+    "senha": "23344",
+})
+console.log(StorageSenhas.getItem("maria@gmail.com").senha)
+console.log(StorageSenhas.getItem("maria@gmail.com"))
+StorageSenhas.setItem("pedro@gmail.com", {
+    "email": " pedro@gmail.com",
+    "senha": "277774",
+})
+console.log(StorageSenhas.getItem("pedro@gmail.com").senha)
+console.log(StorageSenhas.getItem("pedro@gmail.com"))
 
 
 express()
-  .use(express.static(path.join(__dirname, "public")))
-  .set("views", path.join(__dirname, "views"))
-  .set("view engine", "ejs")
-  .get("/", (req, res) => res.render("pages/index"))
-  .get("/buscaPessoas", (req, res) => res.render("pages/buscaPessoas"))
-  .get("/buscaEsportes", (req, res) => res.render("pages/buscaEsportes"))
-  .get("/buscaCampeonato", (req, res) => res.render("pages/buscaCampeonato"))
-  .get("/paginaCadastro", (req, res) => res.render("pages/paginaCadastro"))
-  .get("/paginadelogin", (req, res) => res.render("pages/paginadelogin"))
-  .get("/perfilUsuario", (req, res) => res.render("pages/perfilUsuario"))
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
-
-  
+    .use(bodyParser.urlencoded({ extended: false }))
+    .use(bodyParser.json())
+    .use(express.static(path.join(__dirname, "public")))
+    .set("views", path.join(__dirname, "views"))
+    .set("view engine", "ejs")
+    .get("/", (req, res) => res.render("pages/index"))
+    .get("/buscaPessoas", (req, res) => res.render("pages/buscaPessoas"))
+    .get("/buscaEsportes", (req, res) => res.render("pages/buscaEsportes"))
+    .get("/buscaCampeonato", (req, res) => res.render("pages/buscaCampeonato"))
+    .get("/paginaCadastro", (req, res) => res.render("pages/paginaCadastro"))
+    .get("/paginadelogin", (req, res) => res.render("pages/paginadelogin", { aviso: lib.mensagemDeAvisoLogin }))
+    .post("/verificar", function(req, res) {
+        if (lib.verificar(req.body.email, req.body.senha)) {
+            res.redirect("/paginaCadastro")
+        } else {
+            res.redirect("/paginadelogin")
+        }
+    })
+    .listen(PORT, () => console.log(`Listening on ${PORT}`));
