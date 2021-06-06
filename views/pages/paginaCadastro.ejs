@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include ("../partials/head.ejs") %>
+</head>
+
+<body class="bg-light">
+    <header>
+        <%- include ("../partials/headcadastro.ejs") %>
+    </header>
+    <div class="row mt-5">
+        <%- include ("../partials/tituloCadastro.ejs") %>
+    </div>
+    <div class="container">
+        <main>
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>Edite seu perfil</h2>
+                    <img src="/stylesheets/img/pessoas2.png" class="bd-placeholder-img rounded-circle" width="140" height="140" />
+                    <p>Usuario:llllllll@gmail.com</p>
+
+
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+
+            <!-- Quadro de Escolhas de Equipes -->
+
+            <div class="row g-5">
+                <div class="col-md-5 col-lg-4 order-md-last">
+                    <form class="form-inline">
+                        <img src="/stylesheets/img/whatsappLogo.jpg" alt="..." class="img-thumbnail">
+                        <input class="form-check-label mr-sm-2" type="search" placeholder="Whatsapp" aria-label="Pesquisar">
+                    </form>
+                    <form class="form-inline">
+                        <img src="/stylesheets/img/instagramLogo.jpg" alt="..." class="img-thumbnail">
+                        <input class="form-check-label mr-sm-2" type="search" placeholder="Instagram" aria-label="Pesquisar">
+                    </form>
+                    <div class="mb-4">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Nova Equipe" aria-label="Pesquisar">
+                        </form>
+                    </div>
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-primary">Escolha no Máximo 10 Equipes</span>
+                        <span class="badge bg-primary rounded-pill"></span>
+                    </h4>
+                    <div class="btn-group">
+                        <ul class="dropdown-menu">
+                            ...
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary btn-sm" type="button">
+                        Small split button
+                      </button>
+                        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                      </button>
+                        <ul class="dropdown-menu">
+                            ...
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="container">
+                            </div>
+                            <div class="col-6 col-sm-3">Equipe 1</div>
+                            <div class="col-6 col-sm-3">Equipe 2</div>
+
+                            <!-- Force next columns to break to new line -->
+                            <div class="w-100"></div>
+
+                            <div class="col-6 col-sm-3">Equipe 3</div>
+                            <div class="col-6 col-sm-3">Equipe 4</div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="container-fluid">
+                                    </div>
+                                    <div class="col-6 col-sm-3">Equipe 5</div>
+                                    <div class="col-6 col-sm-3">Equipe 6</div>
+
+                                    <!-- Force next columns to break to new line -->
+                                    <div class="w-100"></div>
+
+                                    <div class="col-6 col-sm-3">Equipe 7</div>
+                                    <div class="col-6 col-sm-3">Equipe 8</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!--começo das opções-->
+                <div class="col-md-7 col-lg-8">
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">Nome:</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+
+                            <div class="col-7">
+                                <label for="firstName" class="form-label">Endereço:</label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name isdsfasdfd.
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputEstado">Cidade : </label>
+                                    <select id="inputEstado" class="form-control">
+                                      <option selected>Escolher...</option>
+                                      <option>...</option>
+                                    
+                                      <option value="AC">Acre</option>
+	<option value="AL">Alagoas</option>
+	<option value="AP">Amapá</option>
+	<option value="AM">Amazonas</option>
+	<option value="BA">Bahia</option>
+	<option value="CE">Ceará</option>
+	<option value="DF">Distrito Federal</option>
+	<option value="ES">Espírito Santo</option>
+	<option value="GO">Goiás</option>
+	<option value="MA">Maranhão</option>
+	<option value="MT">Mato Grosso</option>
+	<option value="MS">Mato Grosso do Sul</option>
+	<option value="MG">Minas Gerais</option>
+	<option value="PA">Pará</option>
+	<option value="PB">Paraíba</option>
+	<option value="PR">Paraná</option>
+	<option value="PE">Pernambuco</option>
+	<option value="PI">Piauí</option>
+	<option value="RJ">Rio de Janeiro</option>
+	<option value="RN">Rio Grande do Norte</option>
+	<option value="RS">Rio Grande do Sul</option>
+	<option value="RO">Rondônia</option>
+	<option value="RR">Roraima</option>
+	<option value="SC">Santa Catarina</option>
+	<option value="SP">São Paulo</option>
+	<option value="SE">Sergipe</option>
+	<option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <hr class="my-4">
+                            <div class="mb-5">
+                                <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+        </main>
+        <div>
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-anchor">Novo Torneio</span>
+                <span class="badge bg-primary rounded-pill"></span>
+            </h4>
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-primary">Escolha no Máximo 10 Torneios para equipes criadas por vôce</span>
+                <span class="badge bg-primary rounded-pill"></span>
+            </h4>
+            </form>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Torneio:</th>
+                        <th scope="col">Nome Torneio</th>
+                        <th scope="col">Equipe </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Torneio</td>
+                        <td>Torneio da Serra</td>
+                        <td>Equipe 1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Torneio</td>
+                        <td>Torneio de BH</td>
+                        <td>Equipe 2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>Torneio</td>
+                        <td>Torneio de SP</td>
+                        <td>Equipe 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div></div>
+        
+            <!--Rodape-->
+            <%- include ("../partials/footer.ejs") %>
+        </footer>
+
+        <script src="/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+        <script src="form-validation.js"></script>
+</body>
+
+</html>
+
+</html>
