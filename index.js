@@ -42,18 +42,12 @@ Storage.setItem('pessoas', [{
     }
 ]);
 //console.log (Storage.getItem('pessoas'))//
-StorageSenhas.setItem("maria@gmail.com", {
-    "email": "maria@gmail.com",
-    "senha": "23344",
+StorageSenhas.setItem("teste@gmail.com", {
+    "email": "teste@gmail.com",
+    "senha": "12345",
 })
-console.log(StorageSenhas.getItem("maria@gmail.com").senha)
-console.log(StorageSenhas.getItem("maria@gmail.com"))
-StorageSenhas.setItem("pedro@gmail.com", {
-    "email": " pedro@gmail.com",
-    "senha": "277774",
-})
-console.log(StorageSenhas.getItem("pedro@gmail.com").senha)
-console.log(StorageSenhas.getItem("pedro@gmail.com"))
+console.log(StorageSenhas.getItem("teste@gmail.com").senha)
+console.log(StorageSenhas.getItem("teste@gmail.com"))
 
 
 express()
