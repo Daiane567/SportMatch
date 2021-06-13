@@ -168,3 +168,33 @@
         width: 7%;
         height: 7%;
     }
+    
+    .dropdown {
+        margin-left: 30%;
+        margin-top: 0%;
+    }
+    
+    .border {
+        background-color: rgb(41, 90, 182);
+    }
+    
+    .table-borderless {
+        background-color: #358041;
+    }
+    
+    #cdequipe {
+        margin-left: 25%;
+        margin-top: 10%;
+    }
+    
+    #brcadastro {
+        margin-left: 25%;
+    }
+    
+    #tabela {
+        width: 50%;
+    }
+    
+    .input-append {
+        align-items: unset;
+    }

@@ -3,6 +3,7 @@
 
 <head>
     <%- include ("../partials/head.ejs") %>
+
 </head>
 
 <body class="bg-light">
@@ -15,6 +16,16 @@
     </div>
     <div class="container">
         <main>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Botão dropdown
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Alguma ação</a>
+                    <a class="dropdown-item" href="#">Outra ação</a>
+                    <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-4">
                     <h2>Edite seu perfil</h2>
@@ -24,27 +35,19 @@
 
                 </div>
 
-                <tr>
-                    <form class="form-inline">
-                        <img src="/stylesheets/img/whatsappLogo.jpg" alt="..." class="img-thumbnail">
-                        <input class="form-check-label mr-sm-2" type="search" placeholder="Whatsapp" aria-label="Pesquisar">
-                    </form>
-                </tr>
+                <form class="form-inline">
+                    <img src="/stylesheets/img/whatsappLogo.jpg" alt="..." class="img-thumbnail">
+                    <input class="form-check-label mr-sm-2" type="search" placeholder="Whatsapp" aria-label="Pesquisar">
+                </form><br/>
+
+
+
                 <form class="form-inline">
                     <img src="/stylesheets/img/instagramLogo.jpg" alt="..." class="img-thumbnail">
                     <input class="form-check-label mr-sm-2" type="search" placeholder="Instagram" aria-label="Pesquisar">
                 </form>
 
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Botão dropdown
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Alguma ação</a>
-                        <a class="dropdown-item" href="#">Outra ação</a>
-                        <a class="dropdown-item" href="#">Alguma coisa aqui</a>
-                    </div>
-                </div>
+
                 <!-- /.col-lg-4 -->
             </div>
 
@@ -54,16 +57,15 @@
                 <div class="col-md-3 col-lg-6 order-md-last">
 
 
-                    <form class="form-search " method="get" id="s" action="...">
-                        <div class="input-append">
-                            <td>Nova equipe</td>
-                            <input type="text" class="input-medium search-query " name="s" placeholder="Digite sua equipe" value="">
-                            <button id="close" class="closing  btn-success" onClick="javascript:close_clip()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg " viewBox="0 0 16 16">
+
+                    <div class="input-append">
+                        <td>Nova equipe</td>
+                        <input type="text" class="input-medium  search-query " name="equipes" id="tabela" placeholder="Digite sua equipe" value="">
+                        <button id="close" class="closing  btn-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg " viewBox="0 0 16 16">
                                 <path d="M13.485 1.431a1.473 1.473 0 0 1 2.104 2.062l-7.84 9.801a1.473 1.473 0 0 1-2.12.04L.431 8.138a1.473 1.473 0 0 1 2.084-2.083l4.111 4.112 6.82-8.69a.486.486 0 0 1 .04-.045z"/>
                               </svg></button>
-                        </div>
+                    </div>
 
-                    </form>
 
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
                         <span class="text-primary">Escolha no Máximo 10 Equipes</span>
@@ -72,7 +74,7 @@
 
 
                     <div>
-                        <table class="table table-borderless" id="tabela">
+                        <!--<table class="table table-borderless" id="tabela">
 
                             <tbody>
 
@@ -102,124 +104,32 @@
 
                             </tbody>
                         </table>
+                    -->
+
+                        <button id="button">Delete selected row</button>
+
+                        <table id="table_id" class="table table-borderless" name="equipesbd">
+
+                            <thead>
+                                <tr>
+                                    <th>Column 1</th>
+                                    <th>Column 2</th>
+                                    <tr>
+                                        <td> </td>
+                                        <td> </td>
+                                    </tr>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="full-box">
+                        <button class="w-50 btn btn-lg btn-primary" id="cdequipe" type="submit">Cadastrar Equipes</button>
                     </div>
 
-
-                    <!--
-                    <div class="btn-group">
-                        <button class="btn btn-secondary btn-sm" type="button">
-                        Small split button
-                      </button>
-                        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="visually-hidden">Toggle Dropdown</span>
-                      </button>
-
-                        <ul class="dropdown-menu">
-                            ...
-                        </ul>
-                    </div>
-
-                    <div class="container-fluid">
-                        <div class="row ">
-                            <div class="container">
-                            </div>
-                            <div class="col-6 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                      Equipe 1
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                    Equipe 2
-                                    </label>
-                                </div>
-                            </div>-->
-
-                    <!-- Force next columns to break to new line -->
-                    <!--<div class="w-100"></div>
-
-                            <div class="col-6 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                  Equipe 3
-                                </label>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                      Equipe 4
-                                    </label>
-                                </div>
-                            </div>
-
-
-
-                            <div class="col-6 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                              Equipe 5
-                                            </label>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6">
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                              Equipe 6
-                                            </label>
-                                </div>
-                            </div>-->
-
-                    <!-- Force next columns to break to new line -->
-                    <!-- <div class="w-100"></div>
-
-                            <div class="col-6 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                              Equipe 7
-                                            </label>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                              Equipe 8
-                                            </label>
-                                </div>
-                            </div>
-                            <div class="w-100"></div>
-
-                            <div class="col-6 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                              Equipe 9
-                                            </label>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                              Equipe 10
-                                            </label>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>-->
                 </div>
 
                 <!---fim das colunas-->
@@ -227,27 +137,27 @@
 
                 <!--começo das opções-->
                 <div class="col-md-3 col-lg-6">
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" method="POST" action="/paginaCadastro" novalidate>
                         <div class="row g-5">
                             <div class="col-sm-6">
                                 <label for="firstName" class="form-label">Nome:</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                <input type="text" name="nome" class="form-control" id="firstName" placeholder="" value="" required>
                                 <div class="invalid-feedback">
                                     Valid first name is required.
                                 </div>
                             </div>
 
                             <div class="col-7">
-                                <label for="firstName" class="form-label">Endereço:</label>
+                                <label for="firstEndereco" class="form-label">Endereço:</label>
                                 <div class="input-group has-validation">
-                                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                    <input type="text" name="endereco" class="form-control" id="firstEndereco" placeholder="" value="" required>
                                     <div class="invalid-feedback">
                                         Valid first name isdsfasdfd.
                                     </div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEstado">Cidade : </label>
-                                    <select id="inputEstado" class="form-control">
+                                    <select name="estado" id="inputEstado" class="form-control">
                                       <option selected>Escolher...</option>
                                       <option>...</option>
                                     
@@ -285,67 +195,98 @@
                             <hr class="my-4">
                             <div class="mb-5">
                                 <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                                <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows="7"></textarea>
+                            </div>
+                            <div class="full-box">
+                                <button class="w-50 btn btn-lg btn-primary" id="brcadastro" type="submit">Cadastrar</button>
                             </div>
                         </div>
 
                         <hr class="my-4">
+                        <div>
+                            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-primary">Novo Torneio</span>
+                                <span class="badge bg-primary rounded-pill"></span>
+                            </h4>
+
+
+                    </form>
 
         </main>
-        <div>
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-primary">Novo Torneio</span>
-                <span class="badge bg-primary rounded-pill"></span>
-            </h4>
-            </form>
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Torneio:</th>
-                        <th scope="col">Nome Torneio</th>
-                        <th scope="col">Equipe </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Torneio</td>
-                        <td>Torneio da Serra</td>
-                        <td>Equipe 1</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Torneio</td>
-                        <td>Torneio de BH</td>
-                        <td>Equipe 2</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"></th>
-                        <td>Torneio</td>
-                        <td>Torneio de SP</td>
-                        <td>Equipe 3</td>
-                    </tr>
-                </tbody>
-            </table>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Torneio:</th>
+                    <th scope="col">Nome Torneio</th>
+                    <th scope="col">Equipe </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Torneio</td>
+                    <td>Torneio da Serra</td>
+                    <td>Equipe 1</td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Torneio</td>
+                    <td>Torneio de BH</td>
+                    <td>Equipe 2</td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Torneio</td>
+                    <td>Torneio de SP</td>
+                    <td>Equipe 3</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="full-box">
+            <button class="w-50 btn btn-lg btn-primary" type="submit">Cadastrar</button>
+        </div>
 
         </div>
 
         <footer>
             <!--Rodape-->
             <%- include ("../partials/footer.ejs") %>
-        </footer>]
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-        <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#id_tabela').DataTable();
-            });
-        </script>
+        </footer>
 
 </body>
+<script>
+    $(document).ready(function() {
 
-</html>
+        $('#table_id').DataTable();
+        var t = $('#table_id').DataTable();
+        var counter = 1;
+        $('#close').on('click', function() {
+            t.row.add([
+                counter,
+                $('#tabela').val()
+
+            ]).draw(false);
+
+            counter++;
+            if (counter > 10) {
+                alert("maximo 10 equipes")
+            }
+
+        });
+        $('#table_id').on('click', 'tr', function() {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            } else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
+        $('#button').click(function() {
+            table.row('.selected').remove().draw(false);
+        });
+    });
+</script>
 
 </html>
