@@ -8,25 +8,11 @@
 
 <body class="bg-light">
     <header>
-        <%- include ("../partials/headcadastro.ejs") %>
+        <%- include ("../partials/header.ejs") %>
     </header>
-
-    <div class="row mt-5">
-        <%- include ("../partials/tituloCadastro.ejs") %>
-    </div>
-    <div class="container">
+    <div class="container-fluid">
         <main>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Botão dropdown
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Alguma ação</a>
-                    <a class="dropdown-item" href="#">Outra ação</a>
-                    <a class="dropdown-item" href="#">Alguma coisa aqui</a>
-                </div>
-            </div>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-lg-4">
                     <h2>Edite seu perfil</h2>
                     <img src="stylesheets/img/imagemperfil.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" />
@@ -36,13 +22,16 @@
                 </div>
 
                 <form class="form-inline">
-                    <img src="/stylesheets/img/whatsappLogo.jpg" alt="..." class="img-thumbnail">
-                    <input class="form-check-label mr-sm-2" type="search" placeholder="Whatsapp" aria-label="Pesquisar">
-                </form><br/>
+                    <td>
+                        <img src="/stylesheets/img/whatsappLogo.jpg" alt="..." class="img-thumbnail">
+                        <input class="form-check-label mr-sm-2" type="search" placeholder="Whatsapp" aria-label="Pesquisar">
+                    </td>
 
 
 
-                <form class="form-inline">
+
+
+
                     <img src="/stylesheets/img/instagramLogo.jpg" alt="..." class="img-thumbnail">
                     <input class="form-check-label mr-sm-2" type="search" placeholder="Instagram" aria-label="Pesquisar">
                 </form>
@@ -118,44 +107,29 @@
 
                             <div class="col-9">
                                 <label for="firstEndereco" class="form-label">Endereço:</label>
-                                <div class="input-group has-validation">
-                                    <input type="text" name="endereco" class="form-control" id="firstEndereco" placeholder="" value="" required>
-                                    <div class="invalid-feedback">
-                                        Valid first name isdsfasdfd.
+                                <div class="row">
+                                    <div class="col-5">
+                                        <!-- Estados -->
+                                        <select id="estados" class="form-select  btn-success" aria-label="Default select example">
+                                                <option selected>Estado</option>
+                                                
+                                              </select>
                                     </div>
+                                    <div class="col-7">
+                                        <!-- Cidades -->
+                                        <select id="cidades" class="form-select  btn-success" aria-label="Default select example">
+                                                <option selected>Cidade</option>
+                                                
+                                              </select>
+                                    </div>
+
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <label for="inputEstado">Cidade : </label>
-                                    <select name="estado" id="inputEstado" class="form-control">
-                                      <option selected>Escolher...</option>
-                                      <option value="AC">Acre</option>
-                                        <option value="AL">Alagoas</option>
-                                        <option value="AP">Amapá</option>
-                                        <option value="AM">Amazonas</option>
-                                        <option value="BA">Bahia</option>
-                                        <option value="CE">Ceará</option>
-                                        <option value="DF">Distrito Federal</option>
-                                        <option value="ES">Espírito Santo</option>
-                                        <option value="GO">Goiás</option>
-                                        <option value="MA">Maranhão</option>
-                                        <option value="MT">Mato Grosso</option>
-                                        <option value="MS">Mato Grosso do Sul</option>
-                                        <option value="MG">Minas Gerais</option>
-                                        <option value="PA">Pará</option>
-                                        <option value="PB">Paraíba</option>
-                                        <option value="PR">Paraná</option>
-                                        <option value="PE">Pernambuco</option>
-                                        <option value="PI">Piauí</option>
-                                        <option value="RJ">Rio de Janeiro</option>
-                                        <option value="RN">Rio Grande do Norte</option>
-                                        <option value="RS">Rio Grande do Sul</option>
-                                        <option value="RO">Rondônia</option>
-                                        <option value="RR">Roraima</option>
-                                        <option value="SC">Santa Catarina</option>
-                                        <option value="SP">São Paulo</option>
-                                        <option value="SE">Sergipe</option>
-                                        <option value="TO">Tocantins</option>
-                                 </select>
+                                <div class="row">
+                                    <label for="firstName" class="form-label">Rua:</label>
+                                    <input type="text" name="nome" class="form-control" id="firstName" placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        É necessário digitar a rua.
+                                    </div>
                                 </div>
                             </div>
                             <hr class="my-4">
@@ -164,7 +138,7 @@
                                 <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows="7"></textarea>
                             </div>
                             <div class="full-box">
-                                <button class="w-50 btn btn-lg btn-primary" id="brcadastro" type="submit">Cadastrar</button>
+                                <button class="w-50 btn btn-lg btn-primary" id="brcadastro" type="submit">Atualizar perfil do usuário</button>
                             </div>
                         </div>
 
@@ -179,42 +153,49 @@
                     </form>
 
         </main>
+        <div class="row">
+            <div class="col-8">
 
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Torneio:</th>
-                    <th scope="col">Nome Torneio</th>
-                    <th scope="col">Equipe </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Torneio</td>
-                    <td>Torneio da Serra</td>
-                    <td>Equipe 1</td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Torneio</td>
-                    <td>Torneio de BH</td>
-                    <td>Equipe 2</td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Torneio</td>
-                    <td>Torneio de SP</td>
-                    <td>Equipe 3</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="full-box">
-            <button class="w-50 btn btn-lg btn-primary" type="submit">Cadastrar</button>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Torneio:</th>
+                            <th scope="col">Nome Torneio</th>
+                            <th scope="col">Equipe </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Torneio</td>
+                            <td>Torneio da Serra</td>
+                            <td>Equipe 1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Torneio</td>
+                            <td>Torneio de BH</td>
+                            <td>Equipe 2</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Torneio</td>
+                            <td>Torneio de SP</td>
+                            <td>Equipe 3</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col-4">
+                <div class="full-box">
+                    <button class="w-50 btn btn-lg btn-primary" type="submit">Cadastrar Torneios</button>
+                </div>
+
+            </div>
         </div>
 
-        </div>
 
         <footer>
             <!--Rodape-->

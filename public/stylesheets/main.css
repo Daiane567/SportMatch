@@ -2,6 +2,10 @@
 -------------------------------------------------- */
     /* Padding below the footer and lighter body text */
     
+    .mt-5 {
+        margin-top: 5rem!important;
+    }
+    
     body {
         color: #5a5a5a;
     }
