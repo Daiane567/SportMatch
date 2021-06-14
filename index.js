@@ -54,8 +54,8 @@ express()
 })
 
 .post("/cadastroEquipes", function(req, res) { //cadastroEquipes
-    console.log("passou", req.body);
-    libEquipe.cadastroEquipes(req.body.equipesbd)
+    console.log("passou", req.body['equipes[]']);
+    libEquipe.cadastroEquipes(req.body['equipes[]'])
 })
 
 .listen(PORT, () => console.log(`Listening on ${PORT}`));

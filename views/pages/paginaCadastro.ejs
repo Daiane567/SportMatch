@@ -54,7 +54,7 @@
             <!-- Quadro de Escolhas de Equipes -->
 
             <div class="row g-5">
-                <div class="col-md-3 col-lg-6 order-md-last">
+                <div class="col-md-6 col-lg-6 order-md-last">
 
 
 
@@ -74,37 +74,6 @@
 
 
                     <div>
-                        <!--<table class="table table-borderless" id="tabela">
-
-                            <tbody>
-
-                                <tr>
-
-                                    <td>Equipe1</td>
-                                    <td>Equipe2</td>
-                                    <td>Equipe3</td>
-                                    <td>Equipe4</td>
-                                    <td>Equipe5</td>
-                                </tr>
-                                <tr>
-                                    <td>Equipe6</td>
-                                    <td>Equipe7</td>
-                                    <td>Equipe8</td>
-                                    <td>Equipe9</td>
-                                    <td>Equipe10</td>
-
-                                </tr>
-                                <tr>
-                                    <td>Equipe8</td>
-                                    <td>Equipe9</td>
-                                    <td>Equipe10</td>
-
-
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    -->
 
                         <button id="button">Delete selected row</button>
 
@@ -112,8 +81,8 @@
 
                             <thead>
                                 <tr>
-                                    <th>Column 1</th>
-                                    <th>Column 2</th>
+                                    <th>Identificador</th>
+                                    <th>Nome</th>
                                     <tr>
                                         <td> </td>
                                         <td> </td>
@@ -139,7 +108,7 @@
                 <div class="col-md-3 col-lg-6">
                     <form class="needs-validation" method="POST" action="/paginaCadastro" novalidate>
                         <div class="row g-5">
-                            <div class="col-sm-6">
+                            <div class="col-sm-9">
                                 <label for="firstName" class="form-label">Nome:</label>
                                 <input type="text" name="nome" class="form-control" id="firstName" placeholder="" value="" required>
                                 <div class="invalid-feedback">
@@ -147,25 +116,50 @@
                                 </div>
                             </div>
 
-                            <div class="col-7">
+                            <div class="col-9">
                                 <label for="firstEndereco" class="form-label">Endereço:</label>
                                 <div class="input-group has-validation">
                                     <input type="text" name="endereco" class="form-control" id="firstEndereco" placeholder="" value="" required>
                                     <div class="invalid-feedback">
                                         Valid first name isdsfasdfd.
                                     </div>
-                                </div><%- include ("../partials/cidades.ejs") %>
+                                </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEstado">Cidade : </label>
                                     <select name="estado" id="inputEstado" class="form-control">
                                       <option selected>Escolher...</option>
-                                      <option>...</option>
-                                    
-                                      
-
+                                      <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                 </select>
+                                </div>
                             </div>
                             <hr class="my-4">
-                            <div class="mb-5">
+                            <div class="mb-9">
                                 <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
                                 <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows="7"></textarea>
                             </div>
@@ -229,35 +223,17 @@
 
 </body>
 <script>
+    var counter = 1;
     $(document).ready(function() {
-
         $('#table_id').DataTable();
         var t = $('#table_id').DataTable();
-        var counter = 1;
         $('#close').on('click', function() {
-            t.row.add([
-                counter,
-                $('#tabela').val()
-
-            ]).draw(false);
-
-            counter++;
-            if (counter > 10) {
-                alert("maximo 10 equipes")
-            }
-
-        });
-        $('#table_id').on('click', 'tr', function() {
-            if ($(this).hasClass('selected')) {
-                $(this).removeClass('selected');
-            } else {
-                table.$('tr.selected').removeClass('selected');
-                $(this).addClass('selected');
+            if (counter <= 10) {
+                var row = t.row.add([counter, $('#tabela').val()]).draw(false);
+                counter++;
             }
         });
-        $('#button').click(function() {
-            table.row('.selected').remove().draw(false);
-        });
+
     });
 </script>
 
