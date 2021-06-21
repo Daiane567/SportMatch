@@ -7,6 +7,7 @@ const hash = new SHA3(224);
 
 const libCadastro = require("./scripts/paginaCadastro");
 const libEquipe = require("./scripts/cadastroEquipes");
+//const libTorneios = require("./scripts/cadastroTorneios");
 const lib = require("./scripts/login");
 if (typeof Storage === "undefined" || Storage === null) {
     var JSONStorage = require("node-localstorage").JSONStorage;
@@ -39,6 +40,9 @@ express()
     .get("/buscaEsportes", (req, res) => res.render("pages/buscaEsportes"))
     .get("/buscaCampeonato", (req, res) => res.render("pages/buscaCampeonato"))
     .get("/paginaCadastro", (req, res) => res.render("pages/paginaCadastro"))
+    .get("/cadastroEquipes", (req, res) => res.render("pages/cadastroEquipes"))
+    .get("/cadastroTorneios", (req, res) => res.render("pages/cadastroTorneios"))
+    .get("/buscaEquipes", (req, res) => res.render("pages/buscaEquipes"))
     .get("/paginadelogin", (req, res) => res.render("pages/paginadelogin", { aviso: lib.mensagemDeAvisoLogin }))
     .post("/verificar", function(req, res) {
         if (lib.verificar(req.body.email, req.body.senha)) {
@@ -54,8 +58,13 @@ express()
 })
 
 .post("/cadastroEquipes", function(req, res) { //cadastroEquipes
-    console.log("passou", req.body['equipes[]']);
-    libEquipe.cadastroEquipes(req.body['equipes[]'])
+    console.log("passouequ", req.body['equipes[]']);
+    libEquipe.cadastroEquipes(req.body['equipes[]']);
 })
+
+//.post("/cadastroTorneios", function(req, res) {
+//   console.log("passou 3", req.body['torneios[]']);
+//   libTorneios.cadastroTorneios(req.body['torneios[]'])
+//})
 
 .listen(PORT, () => console.log(`Listening on ${PORT}`));
