@@ -1,15 +1,7 @@
 var mensagemDeAvisoLogin = { mensagem: "" }
 
-function cadastroEquipes(equipes) {
+function cadastroEquipes(equipesbd) {
     console.log("passou aqui 2", equipesbd)
-    var equipes = Storage.getItem('equipes'); //é uma variavelmeoria (RAM) que armazena o que está dentro da chave pessoa.
-    //no nosso caso é um array.
-
-
-    equipes.push({ //vai armazenar um novo objeto dentro da memoria(array).
-
-        "imagem": "/stylesheets/img/elaine.jpg"
-    });
 
     if (undefined === Storage.getItem('equipes')) {
         Storage.setItem('equipes', equipesbd); //é uma variavel que armazena o que está dentro da chave pessoa.
