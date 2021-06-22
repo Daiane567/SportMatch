@@ -72,19 +72,6 @@
             });
 
         });
-
-        var counter = 1;
-        $(document).ready(function() {
-            $('#tabelabt_id').DataTable();
-            var t = $('#table_id').DataTable();
-            $('#button').on('click', function() {
-                if (counter <= 10) {
-                    var row = t.row.add([counter, $('#tabela').val()]).draw(false);
-                    counter++;
-                }
-            });
-
-        });
     </script>
 </body>
 
