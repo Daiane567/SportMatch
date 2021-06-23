@@ -63,12 +63,12 @@
 
                 i
                 <!--começo-->
-                <% for(var i=0; <Storage.getItem("equipes").length; i++){ %>
-                    <div id="<%= 'equipe'+i %>" class="row">
+                <% for(var i=0; <Storage.getItem("campeonatos").length; i++){ %>
+                    <div id="<%= 'campeonato'+i %>" class="row">
                         <!--principal1-->
                         <div class="col">
                             <!--principal2-->
-                            <% let equipe = Storage.getItem("equipes")[i]; %>
+                            <% let campeonato = Storage.getItem("campeonatos")[i]; %>
                                 <div class="row">
                                     <div class="col-6 cardResponsivo">
                                         <div class="card">
@@ -81,7 +81,7 @@
                                     <div class="col">
                                         <div class="card-body">
                                             <h5 class="card-title">
-                                                <%= equipe.equipes %>
+                                                <%= campeonato.campeonatos %>
                                             </h5>
 
                                             <a href="#" class="btn btn-primary">Entrar em contato</a>
