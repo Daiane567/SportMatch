@@ -41,7 +41,6 @@ express()
     .get("/buscaCampeonato", (req, res) => res.render("pages/buscaCampeonato"))
     .get("/paginaCadastro", (req, res) => res.render("pages/paginaCadastro"))
     .get("/cadastroEquipes", (req, res) => res.render("pages/cadastroEquipes"))
-    .get("/cadastroTorneios", (req, res) => res.render("pages/cadastroTorneios"))
     .get("/buscaEquipes", (req, res) => res.render("pages/buscaEquipes"))
     .get("/paginadelogin", (req, res) => res.render("pages/paginadelogin", { aviso: lib.mensagemDeAvisoLogin }))
     .post("/verificar", function(req, res) {
@@ -62,9 +61,6 @@ express()
     libEquipe.cadastroEquipes(req.body['equipes[]']);
 })
 
-//.post("/cadastroTorneios", function(req, res) {
-//   console.log("passou 3", req.body['torneios[]']);
-//   libTorneios.cadastroTorneios(req.body['torneios[]'])
-//})
+
 
 .listen(PORT, () => console.log(`Listening on ${PORT}`));
