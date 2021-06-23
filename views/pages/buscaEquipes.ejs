@@ -61,9 +61,8 @@
         <section>
             <div class="container-fluid">
 
-                i
                 <!--começo-->
-                <% for(var i=0; <Storage.getItem("equipes").length; i++){ %>
+                <% for(var i=0; i<Storage.getItem("equipes").length; i++){ %>
                     <div id="<%= 'equipe'+i %>" class="row">
                         <!--principal1-->
                         <div class="col">

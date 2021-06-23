@@ -2,6 +2,10 @@
 -------------------------------------------------- */
     /* Padding below the footer and lighter body text */
     
+    .mt-5 {
+        margin-top: 5rem!important;
+    }
+    
     body {
         color: #5a5a5a;
     }
@@ -157,16 +161,11 @@
         margin: 1%;
     }
     
-    .form-inline {
-        width: 7%;
-        height: 7%;
-        margin: 10%;
-        margin-top: 1%;
-    }
-    
-    .form-inline {
-        width: 7%;
-        height: 7%;
+    .img-thumbnail {
+        width: 8%;
+        height: 15%;
+        margin: 1%;
+        margin-left: 0%;
     }
     
     .dropdown {
@@ -179,7 +178,7 @@
     }
     
     .table-borderless {
-        background-color: #358041;
+        background-image: linear-gradient(to right, rgb(96, 140, 233), rgb(60, 93, 243));
     }
     
     #cdequipe {
@@ -197,4 +196,47 @@
     
     .input-append {
         align-items: unset;
+    }
+    
+    #equip {
+        margin-top: 25%;
+    }
+    
+    #textd {
+        background-image: linear-gradient(to right, rgba(90, 164, 194, 0.89), rgb(60, 93, 243));
+    }
+    
+    #contt {
+        margin-top: 20%;
+        background-color: aliceblue;
+        border-radius: 10px;
+    }
+    
+    #corbody {
+        background-color: #99CED4;
+        ;
+    }
+    
+    #centerf {
+        margin: 10%;
+        margin-left: 25%;
+        background-color: aliceblue;
+        border-radius: 10px;
+    }
+    
+    #botao {
+        margin: 8%;
+        margin-left: 40%;
+    }
+    
+    #contt {
+        margin-block-end: 15%;
+    }
+    
+    #equipert {
+        margin-left: 25%;
+    }
+    
+    #torneiof {
+        margin-left: 15%;
     }

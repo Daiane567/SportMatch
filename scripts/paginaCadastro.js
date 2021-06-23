@@ -9,7 +9,7 @@ function paginaCadastro(nome, endereco, cidade, descricao) {
     pessoas.push({ //vai armazenar um novo objeto dentro da memoria(array).
         "nome": nome,
         "descricao": descricao,
-        "imagem": "/stylesheets/img/elaine.jpg"
+        "imagem": "/stylesheets/img/marcos.jpg"
     });
     //memoria volatil RAM 
     console.log(pessoas[pessoas.length - 1]); //vai me mostrar a ultima posição do array.
